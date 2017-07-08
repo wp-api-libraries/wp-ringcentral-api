@@ -102,10 +102,22 @@ if ( ! class_exists( 'RingCentralAPI' ) ) {
 				/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log 
 				/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
 				*/
-			
-			
 		}
 			
+			
+		public function make_call() {
+			
+			// http://ringcentral-api-docs.readthedocs.io/en/latest/ring_out/
+			// POST /restapi/v1.0/account/~/extension/~/ringout
+		}
+		
+		public function poll_call_status() {
+			// GET/restapi/v1.0/account/~/extension/~/ringout/234343434
+		}
+		
+		public function cancel_ringout() {
+			// DELETE /restapi/v1.0/account/~/extension/~/ringout/234343434  
+		}
 
 	}
 }
