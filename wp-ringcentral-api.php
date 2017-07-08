@@ -97,11 +97,16 @@ if ( ! class_exists( 'RingCentralAPI' ) ) {
 		 */
 		public function get_call_logs( $account_id, $extension_id ) {
 			
-			/*
-				/restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls 
-				/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log 
-				/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
-				*/
+			//	/restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log 
+
+		}
+		
+		public function get_active_calls_logs( $account_id, $extension_id ) {
+			// /restapi/v1.0/account/{accountId}/extension/{extensionId}/active-calls 
+		}
+		
+		public function get_call_log( $call_record_id ) {
+			// restapi/v1.0/account/{accountId}/extension/{extensionId}/call-log/{callRecordId}
 		}
 			
 			
@@ -117,6 +122,15 @@ if ( ! class_exists( 'RingCentralAPI' ) ) {
 		
 		public function cancel_ringout() {
 			// DELETE /restapi/v1.0/account/~/extension/~/ringout/234343434  
+		}
+		
+		public function get_call_queue_list( $account_id, $type ) {
+			// GET /restapi/v1.0/account/11111111/extension?type=Department
+		}
+		
+		public function get_agent_queue_list( $account_id, $department_id ) {
+			// POST /restapi/v1.0/account/11111111/department/22223333/members
+
 		}
 
 	}
